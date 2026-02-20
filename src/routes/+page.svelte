@@ -1,2 +1,5 @@
-<h1>Welcome to SvelteKit</h1>
-<p>Visit <a href="https://svelte.dev/docs/kit">svelte.dev/docs/kit</a> to read the documentation</p>
+<h1>Lisam</h1>
+
+<h2>Courses and programs</h2>
+
+<h2>Upcoming for you</h2>
