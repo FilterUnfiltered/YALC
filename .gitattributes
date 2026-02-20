@@ -1,0 +1,8 @@
+// Source - https://stackoverflow.com/a/39275910
+// Posted by stacksonstacksonstacks, modified by community. See post 'Timeline' for change history
+// Retrieved 2026-02-20, License - CC BY-SA 4.0
+
+*.ttf     -text diff
+*.eot     -text diff
+*.woff    -text diff
+*.woff2   -text diff

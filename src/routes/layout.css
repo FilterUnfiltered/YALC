@@ -1,17 +1,41 @@
 @import 'tailwindcss';
 
-body {
-   grid-template-areas: "header header" "sidebar main" "footer footer"; 
+@font-face {
+  font-family: 'Segoe UI Regular';
+  font-style: normal;
+  font-weight: normal;
+  src: url('fonts/segoeui-regular.woff2') format('woff2');
 }
 
-header {
-grid-area: header;
+@font-face {
+  font-family: 'Segoe UI Italic';
+  font-style: normal;
+  font-weight: normal;
+  src:
+    local('Segoe UI Italic'),
+    url('fonts/Segoe UI Italic.woff') format('woff');
 }
 
-main {
-grid-area: main;
+@font-face {
+  font-family: 'Segoe UI Bold';
+  font-style: normal;
+  font-weight: normal;
+  src:
+    local('Segoe UI Bold'),
+    url('fonts/Segoe UI Bold.woff') format('woff');
 }
 
-footer {
-grid-area: footer;
+@font-face {
+  font-family: 'Segoe UI Bold Italic';
+  font-style: normal;
+  font-weight: normal;
+  src:
+    local('Segoe UI Bold Italic'),
+    url('fonts/Segoe UI Bold Italic.woff') format('woff');
+}
+
+:root {
+  font-size: 11pt;
+  font-family: 'Segoe UI Regular';
+  font-weight: normal;
 }
