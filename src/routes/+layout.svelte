@@ -47,5 +47,9 @@
     <a href="tel:+46702994441" class="underline">+46 070 299 4441</a> or at
     <br />
     <a href="tel:+46768999579" class="underline">+46 076 899 9579</a>
+    <br />
+    or you can simply just go
+    <br/>
+    and FUCK YOURSELF
   </div>
 </footer>
