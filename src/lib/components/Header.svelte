@@ -8,18 +8,36 @@
   import { cubicOut } from 'svelte/easing';
   import { Grip } from '@lucide/svelte';
 
-  let open = false;
+  let open = $state(false);
 
   function toggle() {
     open = !open;
   }
+
+  import { setContext, getContext } from 'svelte';
+
+  let lisamSpeed = getContext('lisam-speed');
+
+  setContext('lisam-speed', {
+    get value() {
+      return lisamSpeed;
+    },
+    set value(v: boolean) {
+      lisamSpeed = v;
+    }
+  });
 </script>
 
 <header>
   <nav class="flex items-center gap-4 bg-[#80dcf3]">
     <button
+<<<<<<< HEAD
       on:click={toggle}
       class="flex h-12 w-12 items-center justify-center hover:cursor-pointer hover:bg-gray-300"
+=======
+      onclick={toggle}
+      class="p-4 hover:cursor-pointer hover:bg-gray-300"
+>>>>>>> 4d07d79 (broken state)
       aria-label="menu-select"
     >
       <Grip class="h-6 w-6" />
@@ -38,7 +56,11 @@
           class="absolute top-full left-0 z-50 mt-2 w-48 rounded-md bg-white p-4 shadow-lg"
         >
           <div class="flex items-center space-x-2">
-            <Switch id="airplane-mode" />
+            <Switch
+              id="airplane-mode"
+              checked={getContext('lisam-speed').value}
+              on:checkedChange={(e) => (lisamSpeed.value = e)}
+            />
             <Label for="airplane-mode">Lisam Speed</Label>
           </div>
         </div>
