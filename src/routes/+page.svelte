@@ -3,13 +3,14 @@
   import LatestCoursesList from '$lib/components/LatestCoursesList.svelte';
   import lisam_logo from '$lib/assets/lisam-logo.png';
   import { resolve } from '$app/paths';
+  import BigHeading from '$lib/components/BigHeading.svelte';
 </script>
 
 <nav class="flex items-center gap-8 text-sm text-gray-600 dark:text-gray-400">
-  <h1 class="flex items-center gap-8 text-2xl font-semibold text-black dark:text-white">
+  <BigHeading>
     <img src={lisam_logo} alt="Lisam logo" class="h-12 w-12" />
     Lisam
-  </h1>
+  </BigHeading>
   <a href={resolve('/')} class="hover:underline">Home</a>
   <a href={resolve('/courses')} class="hover:underline">Courses and Programs</a>
   <a href={resolve('/news')} class="hover:underline">Lisam News</a>

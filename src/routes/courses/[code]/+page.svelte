@@ -1,4 +1,6 @@
 <script lang="ts">
+  import BigHeading from '$lib/components/BigHeading.svelte';
+
   let { data } = $props();
   const course = data.course;
 
@@ -7,13 +9,30 @@
   const logoColor = `hsl(${first_two_letters_of_course_name.charCodeAt(0) * 10}, 70%, 30%)`;
 </script>
 
-<h1 class="flex items-center gap-6 text-2xl font-semibold">
-  <div class="flex h-12 w-12 items-center justify-center text-white" style="background-color: {logoColor}">
+<BigHeading>
+  <div
+    class="flex h-12 w-12 items-center justify-center text-white"
+    style="background-color: {logoColor}"
+  >
     {first_two_letters_of_course_name}
   </div>
   {course.code} – {course.name}
-</h1>
+</BigHeading>
 
 <div class="flex">
-  <div></div>
+  <div class="flex flex-1 flex-col gap-4">
+    <a>Startsida</a>
+    <a>Kursplan</a>
+    <a>Kursdokument</a>
+    <a>Samarbetsyta</a>
+    <a>Schema</a>
+    <a>Föreläsningar</a>
+    <a>Inlämningar</a>
+    <a>Anmälan</a>
+    <a>Laborationer</a>
+    <a>Teams</a>
+  </div>
+  <div class="flex-4">
+    {course.description}
+  </div>
 </div>

@@ -7,7 +7,7 @@ import yaml from 'yaml';
 
 const file = fs.readFileSync(path.resolve('src/lib/assets/courses.yaml'), 'utf-8');
 
-const courses = yaml.parse(file) as Record<string, { name: string }>;
+const courses = yaml.parse(file) as Record<string, { name: string; description: string }>;
 
 export async function load() {
   return { courses };
