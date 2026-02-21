@@ -1,5 +1,6 @@
 <script lang="ts">
   import './layout.css';
+  import sharepoint_icon from '$lib/assets/sharepoint.ico';
   import yalc_sharepoint from '$lib/assets/yalc-sharepoint.svg';
   import yalc_logo from '$lib/assets/yalc-logo.svg';
   import liu_primar_vit from '$lib/assets/LiU_primar_vit.svg';
@@ -17,10 +18,12 @@
       document.body.classList.remove('dark');
     }
   });
+
+  let favicon = $derived(theme.light ? sharepoint_icon : yalc_sharepoint);
 </script>
 
 <svelte:head>
-  <link rel="icon" href={yalc_sharepoint} />
+  <link rel="icon" href={favicon} />
 </svelte:head>
 
 <Header />
@@ -49,7 +52,7 @@
     <a href="tel:+46768999579" class="underline">+46 076 899 9579</a>
     <br />
     or you can simply just go
-    <br/>
+    <br />
     and FUCK YOURSELF
   </div>
 </footer>

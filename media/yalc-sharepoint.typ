@@ -107,22 +107,15 @@
       ),
       box(
         fill: gradient.radial(
-          light-blue,
-          dark-blue,
+          light-blue.darken(30%),
+          dark-blue.darken(30%),
         ),
       ),
     )
     place(
       center + horizon,
-      image(
-        bytes(
-          read("kys.svg").replace(
-            "#000000",
-            white.to-hex(),
-          ),
-        ),
-        height: 1.3em,
-      ),
+      dx: 0.1em,
+      text(3em)[🤓],
     )
   },
 )
