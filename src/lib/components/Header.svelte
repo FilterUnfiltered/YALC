@@ -31,13 +31,8 @@
 <header>
   <nav class="flex items-center gap-4 bg-[#80dcf3]">
     <button
-<<<<<<< HEAD
-      on:click={toggle}
-      class="flex h-12 w-12 items-center justify-center hover:cursor-pointer hover:bg-gray-300"
-=======
       onclick={toggle}
-      class="p-4 hover:cursor-pointer hover:bg-gray-300"
->>>>>>> 4d07d79 (broken state)
+      class="flex h-12 w-12 items-center justify-center hover:cursor-pointer hover:bg-gray-300"
       aria-label="menu-select"
     >
       <Grip class="h-6 w-6" />

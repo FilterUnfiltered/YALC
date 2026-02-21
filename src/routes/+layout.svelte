@@ -5,6 +5,7 @@
   import liu_primar_vit from '$lib/assets/LiU_primar_vit.svg';
   import Sidebar from '$lib/components/Sidebar.svelte';
   import Header from '$lib/components/Header.svelte';
+  import SubHeader from '$lib/components/SubHeader.svelte';
 
   let { children } = $props();
 </script>
@@ -18,7 +19,8 @@
 <section class="flex flex-1">
   <Sidebar />
 
-  <main>
+  <main class="p-8">
+    <SubHeader />
     <h1 class="flex items-center gap-2 text-2xl font-semibold">
       <img src={lisam_logo} alt="Lisam logo" class="h-12 w-12" />
       Lisam
