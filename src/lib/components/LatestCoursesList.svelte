@@ -10,10 +10,15 @@
   >;
 </script>
 
-<div class="inline-grid grid-cols-[auto_auto] items-stretch border-b border-[#03787c] bg-[#f0f9fa]">
+<div
+  class="inline-grid grid-cols-[auto_auto] items-stretch border-b border-[#03787c] bg-[#f0f9fa] dark:bg-[#03787c]"
+>
   {#each Object.entries(courses) as [code, course]}
     <!-- FIXME: use type-safe/corrected href? -->
-    <a class="truncate border-t border-[#03787c] p-4 font-semibold whitespace-nowrap" href={resolve(`/courses/${code}`)}>
+    <a
+      class="truncate border-t border-[#03787c] p-4 font-semibold whitespace-nowrap"
+      href={resolve(`/courses/${code}`)}
+    >
       {code} - {course.name}
     </a>
     <svg
