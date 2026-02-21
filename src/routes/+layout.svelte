@@ -42,7 +42,7 @@
 
 <Sidebar />
 
-<main>
+<main class="flex-1">
   <h1 class="flex">
     <img width="50" src={lisam_logo} alt="Lisam logo" />
     Lisam
