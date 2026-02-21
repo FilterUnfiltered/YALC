@@ -16,7 +16,7 @@
   >
     {first_two_letters_of_course_name}
   </div>
-  {course.code} – {course.name}
+  {course.code} - {course.name}
 </BigHeading>
 
 <div class="flex">
