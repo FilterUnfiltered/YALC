@@ -37,7 +37,7 @@
             easing: cubicOut,
             opacity: 0
           }}
-          class="absolute top-full left-0 z-50 mt-2 w-48 rounded-md bg-white p-4 shadow-lg"
+          class="fixed top-10 left-0 z-50 mt-2 w-48 rounded-md bg-white p-4 shadow-lg"
         >
           <div class="flex items-center space-x-2">
             <Switch id="airplane-mode" bind:checked={theme.light} />
