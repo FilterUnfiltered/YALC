@@ -3,11 +3,13 @@
   import DifferingSpeedLink from '$lib/components/DifferingSpeedLink.svelte';
 
   let { data } = $props();
-  const course = data.course;
+  const { course } = $derived(data);
 
-  const first_two_letters_of_course_name = course.name.slice(0, 2).toUpperCase();
+  const first_two_letters_of_course_name = $derived(course.name.slice(0, 2).toUpperCase());
   // random dark color based on `first_two_letters_of_course_name`
-  const logoColor = `hsl(${first_two_letters_of_course_name.charCodeAt(0) * 10}, 70%, 30%)`;
+  const logoColor = $derived(
+    `hsl(${first_two_letters_of_course_name.charCodeAt(0) * 10}, 70%, 30%)`
+  );
 </script>
 
 <BigHeading class="mb-4">
