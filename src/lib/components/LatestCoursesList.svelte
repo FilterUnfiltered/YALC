@@ -1,23 +1,20 @@
 <script lang="ts">
-  type Course = {
-    code: string;
-    name: string;
-  };
-  import yaml from 'js-yaml';
+  import yaml from 'yaml';
+  import { resolve } from '$app/paths';
   import coursesYamlString from '$lib/assets/courses.yaml?raw';
-  const courses = yaml.load(coursesYamlString) as Course[];
-
-  import { GraduationCap } from '@lucide/svelte';
+  const courses = yaml.parse(coursesYamlString) as Record<
+    string,
+    {
+      name: string;
+    }
+  >;
 </script>
 
 <div class="inline-grid grid-cols-[auto_auto] items-stretch border-b border-[#03787c] bg-[#f0f9fa]">
-  {#each courses as course}
+  {#each Object.entries(courses) as [code, course]}
     <!-- FIXME: use type-safe/corrected href? -->
-    <a
-      class="truncate border-t border-[#03787c] p-4 font-semibold whitespace-nowrap"
-      href={course.code}
-    >
-      {course.code} - {course.name}
+    <a class="truncate border-t border-[#03787c] p-4 font-semibold whitespace-nowrap" href={resolve(`/courses/${code}`)}>
+      {code} - {course.name}
     </a>
     <svg
       width="2em"

@@ -1,11 +1,11 @@
-- code: TATB01
+TATB01:
   name: Matematisk grunkkurs
 
-- code: TATB02
+TATB02:
   name: Matematisk fortsättningskurs
 
-- code: TATB03
+TATB03:
   name: Fortsättning på Matematisk fortsättningskurs
 
-- code: TATB04
+TATB04:
   name: Fortsättning på Fortsättning på Matematisk fortsättningskurs
