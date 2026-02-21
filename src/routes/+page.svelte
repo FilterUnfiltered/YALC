@@ -5,7 +5,7 @@
   import lisam_logo from '$lib/assets/lisam-logo.png';
 </script>
 
-<h1 class="flex items-center gap-2 text-2xl font-semibold">
+<h1 class="flex items-center gap-6 text-2xl font-semibold">
   <img src={lisam_logo} alt="Lisam logo" class="h-12 w-12" />
   Lisam
 </h1>
