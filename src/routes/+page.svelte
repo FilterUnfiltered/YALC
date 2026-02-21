@@ -1,6 +1,7 @@
 <script lang="ts">
   import Heading from '$lib/components/Heading.svelte';
   import LatestCoursesList from '$lib/components/LatestCoursesList.svelte';
+  import UpcomingForYou from '$lib/components/UpcomingForYou.svelte';
   import lisam_logo from '$lib/assets/lisam-logo.png';
   import { resolve } from '$app/paths';
   import BigHeading from '$lib/components/BigHeading.svelte';
@@ -17,7 +18,14 @@
   <a href={resolve('/upcoming')} class="hover:underline">Upcoming</a>
 </nav>
 
-<Heading class="py-4">Courses and programs</Heading>
-<LatestCoursesList />
+<div class="flex flex-row gap-8">
+  <div class="flex-3">
+    <Heading class="py-4">Courses and programs</Heading>
+    <LatestCoursesList />
+  </div>
 
-<h2>Upcoming for you</h2>
+  <div class="flex-2">
+    <Heading class="py-4">Upcoming for you</Heading>
+    <UpcomingForYou />
+  </div>
+</div>
