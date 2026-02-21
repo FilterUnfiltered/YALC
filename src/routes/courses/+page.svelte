@@ -1,8 +1,12 @@
 <script lang="ts">
+  import BigHeading from '$lib/components/BigHeading.svelte';
+
   const { data } = $props();
 </script>
 
-<h1>Courses</h1>
+<BigHeading>
+  Courses and programs
+</BigHeading>
 
 <ul>
   {#each Object.entries(data.courses) as [code, course]}
