@@ -5,7 +5,7 @@
 </script>
 
 <div
-  class="flex h-12 w-full items-center border-b border-gray-300 bg-gray-200 pl-8 dark:border-gray-700 dark:bg-gray-800"
+  class="flex h-12 w-full items-center border-b border-gray-300 bg-[#f3f2f1] pl-8 dark:border-gray-700 dark:bg-gray-800"
 >
   <nav class="flex h-full w-full items-center gap-2 text-sm text-gray-600 dark:text-gray-400">
     {#each rootRoute as route, index (route)}
