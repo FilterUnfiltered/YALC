@@ -35,7 +35,16 @@
   </article>
 </section>
 
-<footer class="bg-[#03787c] p-4 text-white">
-  <img width="200" src={liu_primar_vit} alt="liu logo" />
-  No rights reservd!!!
+<footer class="flex justify-between gap-4 bg-[#03787c] p-4 text-white">
+  <div>
+    <img width="200" src={liu_primar_vit} alt="liu logo" />
+    No rights reservd!!!
+  </div>
+
+  <div>
+    For support, call us at <br />
+    <a href="tel:+46702994441" class="underline">+46 070 299 4441</a> or at
+    <br />
+    <a href="tel:+46768999579" class="underline">+46 076 899 9579</a>
+  </div>
 </footer>
