@@ -9,7 +9,7 @@
   const logoColor = `hsl(${first_two_letters_of_course_name.charCodeAt(0) * 10}, 70%, 30%)`;
 </script>
 
-<BigHeading>
+<BigHeading class="mb-4">
   <div
     class="flex h-12 w-12 items-center justify-center text-white"
     style="background-color: {logoColor}"
@@ -19,7 +19,7 @@
   {course.code} - {course.name}
 </BigHeading>
 
-<div class="flex">
+<div class="flex gap-2">
   <div
     class="flex flex-1 flex-col opacity-80 [&>*]:p-2 [&>*]:hover:cursor-pointer [&>*]:hover:bg-gray-100 [&>*]:hover:underline [&>*]:dark:hover:bg-gray-800"
   >
@@ -35,7 +35,7 @@
     <a>Teams</a>
   </div>
 
-  <div class="flex-4">
+  <div class="flex-4 p-2">
     {course.description}
   </div>
 </div>
