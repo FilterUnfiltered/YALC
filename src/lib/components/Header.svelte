@@ -67,12 +67,16 @@
       <!-- Search input with icon. Should be in center of nav -->
       <div class="relative">
         <img
-          class="absolute top-1/2 left-2 -translate-y-1/2"
+          class="absolute top-1/2 left-4 -translate-y-1/2"
           width="16"
           src={search}
           alt="Search icon"
         />
-        <Input type="search" placeholder="Search across sites" class="w-80 pl-8" />
+        <Input
+          type="search"
+          placeholder="Search across sites"
+          class="h-[32px] w-116 pl-12 shadow-sm"
+        />
       </div>
     </div>
 
