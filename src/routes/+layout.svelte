@@ -1,18 +1,15 @@
 <script lang="ts">
   import './layout.css';
   import yalc_logo from '$lib/assets/yalc-logo.svg';
-  import lisam_logo from '$lib/assets/lisam-logo.png';
   import liu_primar_vit from '$lib/assets/LiU_primar_vit.svg';
   import Sidebar from '$lib/components/Sidebar.svelte';
   import Header from '$lib/components/Header.svelte';
   import SubHeader from '$lib/components/SubHeader.svelte';
   import { theme } from '$lib/theme.svelte';
-  import { resolve } from '$app/paths';
 
   let { children } = $props();
 
   $effect(() => {
-    console.log(theme.light);
     if (!theme.light) {
       document.body.classList.add('dark');
     } else {

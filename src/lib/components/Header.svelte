@@ -9,46 +9,37 @@
   import settings from '$lib/assets/settings.svg';
   import copilot from '$lib/assets/copilot.svg';
 
-  import { fly } from 'svelte/transition';
-  import { cubicOut } from 'svelte/easing';
+  import {
+    DropdownMenu,
+    DropdownMenuTrigger,
+    DropdownMenuContent
+  } from '$lib/components/ui/dropdown-menu/index.js';
 
   import { Grip } from '@lucide/svelte';
-
-  let open = $state<boolean>(false);
-  function toggle() {
-    open = !open;
-  }
 </script>
 
 <header>
   <nav class="flex h-16 items-center justify-between gap-4 bg-[#80dcf3]">
-    <button
-      onclick={toggle}
-      class="flex h-12 w-12 items-center justify-center hover:cursor-pointer hover:bg-gray-300"
-      aria-label="menu-select"
-    >
-      <Grip class="h-6 w-6" />
-    </button>
-
-    <div class="left absolute relative top-full inline-block dark:bg-gray-800">
-      {#if open}
-        <div
-          transition:fly={{
-            x: -12, // move from right
-            y: -8, // move from slightly above
-            duration: 100,
-            easing: cubicOut,
-            opacity: 0
-          }}
-          class="fixed top-10 left-0 z-50 mt-2 w-48 rounded-md bg-white p-4 shadow-lg dark:bg-gray-800"
+    <DropdownMenu>
+      <DropdownMenuTrigger>
+        <button
+          class="flex h-12 w-12 items-center justify-center hover:cursor-pointer hover:bg-gray-300"
+          aria-label="menu-select"
         >
-          <div class="flex items-center space-x-2 rounded-md p-2 dark:hover:bg-gray-700">
-            <Switch id="airplane-mode" bind:checked={theme.light} />
-            <Label for="airplane-mode">Lisam Speed</Label>
-          </div>
+          <Grip class="h-6 w-6" />
+        </button>
+      </DropdownMenuTrigger>
+
+      <DropdownMenuContent
+        align="start"
+        class="mt-2 w-48 rounded-md bg-white p-4 shadow-lg dark:bg-gray-800"
+      >
+        <div class="flex items-center space-x-2 rounded-md p-2 dark:hover:bg-gray-700">
+          <Switch id="lisam-mode" bind:checked={theme.light} />
+          <Label for="lisam-mode">Lisam Speed</Label>
         </div>
-      {/if}
-    </div>
+      </DropdownMenuContent>
+    </DropdownMenu>
     <img class="mr-20" width="30" src={liu_notext_black} alt="YALC logo" />
     <b class="mr-20">Share</b><b>Point</b>
     <div class="relative flex-1">
