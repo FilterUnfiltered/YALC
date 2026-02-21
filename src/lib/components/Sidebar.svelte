@@ -11,7 +11,7 @@
     class="flex h-12 w-12 items-center justify-center hover:cursor-pointer hover:bg-gray-500 dark:hover:bg-gray-700"
   >
     <a href={resolve('/')}>
-      <img src={theme.light ? liu_logo : light_liu_logo} alt="LiU logo" class="h-8 w-8" />
+      <img src={theme.light ? liu_logo : light_liu_logo} alt="LiU logo" class="h-6 w-6" />
     </a>
   </li>
   <li

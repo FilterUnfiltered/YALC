@@ -19,10 +19,10 @@
 </script>
 
 <header>
-  <nav class="flex h-16 items-center justify-between gap-4 bg-[#80dcf3]">
+  <nav class="flex items-center justify-between gap-4 bg-[#80dcf3]">
     <DropdownMenu>
       <DropdownMenuTrigger
-        class="flex h-12 w-12 items-center justify-center hover:cursor-pointer hover:bg-gray-300"
+        class="flex h-14 w-14 items-center justify-center hover:cursor-pointer hover:bg-gray-300"
         aria-label="menu-select"
       >
         <Grip class="h-6 w-6" />
@@ -38,7 +38,7 @@
         </div>
       </DropdownMenuContent>
     </DropdownMenu>
-    <img class="mr-20" width="30" src={liu_notext_black} alt="YALC logo" />
+    <img class="mr-20 h-12 w-12" src={liu_notext_black} alt="YALC logo" />
     <b class="mr-20">Share</b><b>Point</b>
     <div class="relative flex-1">
       <!-- Search input with icon. Should be in center of nav -->
@@ -50,10 +50,10 @@
       />
       <Input type="search" placeholder="Search across sites" class="max-w-xs pl-8" />
     </div>
-    <button class="ml-4 h-full rounded-md p-2 hover:bg-gray-300" aria-label="copilot">
+    <button class="ml-4 h-full rounded-md px-2 hover:bg-gray-300" aria-label="copilot">
       <img width="16" src={copilot} alt="Copilot icon" />
     </button>
-    <button class="ml-4 h-full rounded-md p-2 hover:bg-gray-300" aria-label="settings">
+    <button class="ml-4 h-full rounded-md px-2 hover:bg-gray-300" aria-label="settings">
       <img width="16" src={settings} alt="Settings icon" />
     </button>
   </nav>
