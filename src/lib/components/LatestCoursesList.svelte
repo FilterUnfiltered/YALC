@@ -11,7 +11,7 @@
 </script>
 
 <div
-  class="grid w-full grid-cols-[auto_auto] items-stretch border-b border-[#03787c] bg-[#f0f9fa] dark:bg-[#03787c]"
+  class="grid w-full grid-cols-[1fr_50px] items-stretch border-b border-[#03787c] bg-[#f0f9fa] dark:bg-[#03787c]"
 >
   {#each Object.entries(courses) as [code, course] (code)}
     <!-- FIXME: use type-safe/corrected href? -->

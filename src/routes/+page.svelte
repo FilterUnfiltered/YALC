@@ -18,7 +18,7 @@
   <a href={resolve('/upcoming')} class="hover:underline">Upcoming</a>
 </nav>
 
-<div class="flex flex-row gap-8">
+<div class="flex flex-row gap-8 px-30">
   <div class="flex-3">
     <Heading class="py-4">Courses and programs</Heading>
     <LatestCoursesList />

@@ -1,5 +1,5 @@
 <div
-  class="inline-grid w-full grid-cols-[auto_auto] items-stretch border-b border-[#03787c] dark:bg-[#03787c]"
+  class="inline-grid w-full grid-cols-[1fr_50px] items-stretch border-b border-[#03787c] dark:bg-[#03787c]"
 >
   <a class="truncate border-t border-[#03787c] p-4 text-lg font-semibold whitespace-nowrap" href="">
     Death to all students - TATB03
