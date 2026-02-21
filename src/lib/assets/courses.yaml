@@ -1,11 +1,16 @@
 TATB01:
   name: Matematisk grunkkurs
+  description: |
+    Kursen upplevs som en bra och nödvändig inkörsport till kommande matematikstudier. Man lär sig bland annat bevisföring och lösningsredovisning enligt högskolematematikens krav. Med kursen får man också en för många välbehövlig uppfriskning av gymnasiematematiken. Kursen examineras med obligatoriska inlämningsuppgifter samt två duggor (mindre prov). För den som inte uppnått godkänt efter detta finns möjlighet att skriva en tenta. Inlämningsuppgifterna rekommenderas studenten att göra utanför lektionstid då man annars lätt kan halka efter på lektionsuppgifterna. Kurslitteraturen är samma som senare kommer att används i Envariabelsanalys 1 och Envariabelsanalys 2, och du kommer dessutom att ha stor nytta av den som uppslagsbok i andra kurser.
 
 TATB02:
   name: Matematisk fortsättningskurs
+  description: |
 
 TATB03:
   name: Fortsättning på Matematisk fortsättningskurs
+  description: |
 
 TATB04:
   name: Fortsättning på Fortsättning på Matematisk fortsättningskurs
+  description: |
