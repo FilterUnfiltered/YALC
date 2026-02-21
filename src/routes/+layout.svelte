@@ -3,7 +3,6 @@
   import yalc_logo from '$lib/assets/yalc-logo.svg';
   import lisam_logo from '$lib/assets/lisam-logo.png';
   import liu_primar_vit from '$lib/assets/LiU_primar_vit.svg';
-  import liu_notext_black from '$lib/assets/LiU-Black_Liu_noText.svg';
   import Sidebar from '$lib/components/Sidebar.svelte';
   import Header from '$lib/components/Header.svelte';
 
