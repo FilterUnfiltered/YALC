@@ -2,7 +2,7 @@
   import { Label } from '$lib/components/ui/label/index.js';
   import { Switch } from '$lib/components/ui/switch/index.js';
   import { Input } from '$lib/components/ui/input/index.js';
-  import { theme } from '$lib/theme.svelte.ts';
+  import { theme } from '$lib/theme.svelte';
 
   import liu_notext_black from '$lib/assets/LiU-Black_Liu_noText.svg';
   import search from '$lib/assets/search.svg';
@@ -11,7 +11,6 @@
 
   import { fly } from 'svelte/transition';
   import { cubicOut } from 'svelte/easing';
-  import { setContext, getContext } from 'svelte';
 
   import { Grip } from '@lucide/svelte';
 

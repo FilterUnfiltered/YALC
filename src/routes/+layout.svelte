@@ -6,11 +6,10 @@
   import Sidebar from '$lib/components/Sidebar.svelte';
   import Header from '$lib/components/Header.svelte';
   import SubHeader from '$lib/components/SubHeader.svelte';
-  import { getContext } from 'svelte';
   import { theme } from '$lib/theme.svelte';
+  import { resolve } from '$app/paths';
 
   let { children } = $props();
-  let black = $state<boolean>(getContext<boolean>('lisam-speed'));
 
   $effect(() => {
     console.log(theme.light);
