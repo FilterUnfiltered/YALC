@@ -15,6 +15,32 @@
     DropdownMenuContent
   } from '$lib/components/ui/dropdown-menu/index.js';
 
+  import foxyGifPath from '$lib/assets/fnaf-foxy-jumpscare.gif';
+  import screamPath from '$lib/assets/foxy.opus';
+
+  let doJumpscare = $state(false);
+
+  let audio: HTMLAudioElement;
+
+  $effect(() => {
+    audio = new Audio(screamPath);
+    audio.volume = 1;
+  });
+
+  $effect(() => {
+    if (doJumpscare) {
+      audio.currentTime = 0;
+      audio.play().catch(() => {});
+
+      setTimeout(() => {
+        doJumpscare = false;
+        audio.pause();
+      }, 750);
+    }
+  });
+
+  let foxyGifSrc = $derived(doJumpscare ? `${foxyGifPath}?${Date.now()}` : null);
+
   const LISAM_MODE_STORAGE_KEY = 'lisamMode';
 
   import { browser } from '$app/environment';
@@ -82,7 +108,13 @@
 
     <!-- Right section -->
     <div class="flex items-center justify-end gap-2">
-      <button class="h-full rounded-md px-2 hover:bg-gray-300" aria-label="copilot">
+      <button
+        class="h-full rounded-md px-2 hover:bg-gray-300"
+        aria-label="copilot"
+        onclick={() => {
+          doJumpscare = true;
+        }}
+      >
         <img width="16" src={copilot} alt="Copilot icon" />
       </button>
       <button class="h-full rounded-md px-2 hover:bg-gray-300" aria-label="settings">
@@ -91,3 +123,9 @@
     </div>
   </nav>
 </header>
+
+<img
+  src={foxyGifSrc}
+  alt="Foxy Jumpscare"
+  class="pointer-events-none absolute top-0 left-0 h-full w-full object-cover"
+/>
