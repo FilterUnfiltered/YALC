@@ -15,6 +15,22 @@
     DropdownMenuContent
   } from '$lib/components/ui/dropdown-menu/index.js';
 
+  const LISAM_MODE_STORAGE_KEY = 'lisamMode';
+
+  import { browser } from '$app/environment';
+
+  if (browser) {
+    const stored = localStorage.getItem(LISAM_MODE_STORAGE_KEY);
+
+    if (stored !== null) {
+      theme.light = stored === 'true';
+    }
+
+    $effect(() => {
+      localStorage.setItem(LISAM_MODE_STORAGE_KEY, String(theme.light));
+    });
+  }
+
   import { Grip } from '@lucide/svelte';
 </script>
 
