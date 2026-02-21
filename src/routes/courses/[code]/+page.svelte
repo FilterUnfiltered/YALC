@@ -21,16 +21,16 @@
 
 <div class="flex">
   <div class="flex flex-1 flex-col gap-4">
-    <a>Startsida</a>
-    <a>Kursplan</a>
-    <a>Kursdokument</a>
-    <a>Samarbetsyta</a>
-    <a>Schema</a>
-    <a>Föreläsningar</a>
-    <a>Inlämningar</a>
-    <a>Anmälan</a>
-    <a>Laborationer</a>
-    <a>Teams</a>
+    <a class="hover:cursor-pointer hover:underline">Startsida</a>
+    <a class="hover:cursor-pointer hover:underline">Kursplan</a>
+    <a class="hover:cursor-pointer hover:underline">Kursdokument</a>
+    <a class="hover:cursor-pointer hover:underline">Samarbetsyta</a>
+    <a class="hover:cursor-pointer hover:underline">Schema</a>
+    <a class="hover:cursor-pointer hover:underline">Föreläsningar</a>
+    <a class="hover:cursor-pointer hover:underline">Inlämningar</a>
+    <a class="hover:cursor-pointer hover:underline">Anmälan</a>
+    <a class="hover:cursor-pointer hover:underline">Laborationer</a>
+    <a class="hover:cursor-pointer hover:underline">Teams</a>
   </div>
   <div class="flex-4">
     {course.description}
