@@ -1,14 +1,14 @@
 <script lang="ts">
-  let { data } = $props();
+  const { data } = $props();
 </script>
 
 <h1>Courses</h1>
 
 <ul>
-  {#each data.courses as course}
+  {#each Object.entries(data.courses) as [code, course]}
     <li>
-      <a href={`/courses/${course.code}`}>
-        {course.code} – {course.name}
+      <a href={`/courses/${code}`}>
+        {code} – {course.name}
       </a>
     </li>
   {/each}
