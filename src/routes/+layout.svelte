@@ -29,7 +29,7 @@
 
   <article class="flex flex-1 flex-col">
     <SubHeader />
-    <main class="p-8">
+    <main class="p-8 pl-50">
       {@render children()}
     </main>
   </article>

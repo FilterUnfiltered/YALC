@@ -11,13 +11,13 @@
 </script>
 
 <div
-  class="inline-grid grid-cols-[auto_auto] items-stretch border-b border-[#03787c] bg-[#f0f9fa] dark:bg-[#03787c]"
+  class="inline-grid w-full grid-cols-[auto_auto] items-stretch border-b border-[#03787c] bg-[#f0f9fa] dark:bg-[#03787c]"
 >
   {#each Object.entries(courses) as [code, course] (code)}
     <!-- FIXME: use type-safe/corrected href? -->
     <a
       data-sveltekit-preload-data
-      class="truncate border-t border-[#03787c] p-4 font-semibold whitespace-nowrap"
+      class="truncate border-t border-[#03787c] p-4 text-lg font-semibold whitespace-nowrap"
       href={resolve(`/courses/${code}`)}
     >
       {code} - {course.name}
