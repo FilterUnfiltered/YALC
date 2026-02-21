@@ -6,8 +6,20 @@
   import Sidebar from '$lib/components/Sidebar.svelte';
   import Header from '$lib/components/Header.svelte';
   import SubHeader from '$lib/components/SubHeader.svelte';
+  import { getContext } from 'svelte';
+  import { theme } from '$lib/theme.svelte';
 
   let { children } = $props();
+  let black = $state<boolean>(getContext<boolean>('lisam-speed'));
+
+  $effect(() => {
+    console.log(theme.light);
+    if (!theme.light) {
+      document.body.classList.add('dark');
+    } else {
+      document.body.classList.remove('dark');
+    }
+  });
 </script>
 
 <svelte:head>

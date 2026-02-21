@@ -1,6 +1,7 @@
 <script lang="ts">
   import { Label } from '$lib/components/ui/label/index.js';
   import { Switch } from '$lib/components/ui/switch/index.js';
+  import { theme } from '$lib/theme.svelte.ts';
 
   import liu_notext_black from '$lib/assets/LiU-Black_Liu_noText.svg';
 
@@ -11,10 +12,6 @@
   import { Grip } from '@lucide/svelte';
 
   let open = $state<boolean>(false);
-  let lisamSpeed = $state<boolean>(getContext<boolean>('lisam-speed'));
-
-  setContext('lisam-speed', () => lisamSpeed);
-
   function toggle() {
     open = !open;
   }
@@ -43,11 +40,7 @@
           class="absolute top-full left-0 z-50 mt-2 w-48 rounded-md bg-white p-4 shadow-lg"
         >
           <div class="flex items-center space-x-2">
-            <Switch
-              id="airplane-mode"
-              checked={lisamSpeed}
-              onCheckedChange={(checked) => (lisamSpeed = checked)}
-            />
+            <Switch id="airplane-mode" bind:checked={theme.light} />
             <Label for="airplane-mode">Lisam Speed</Label>
           </div>
         </div>
