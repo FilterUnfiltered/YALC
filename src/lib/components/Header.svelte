@@ -6,6 +6,7 @@
 
   import { fly } from 'svelte/transition';
   import { cubicOut } from 'svelte/easing';
+  import { Grip } from '@lucide/svelte';
 
   let open = false;
 
@@ -18,27 +19,10 @@
   <nav class="flex items-center gap-4 bg-[#80dcf3]">
     <button
       on:click={toggle}
-      class="p-4 hover:cursor-pointer hover:bg-gray-300"
+      class="flex h-12 w-12 items-center justify-center hover:cursor-pointer hover:bg-gray-300"
       aria-label="menu-select"
     >
-      <svg
-        width="24"
-        height="24"
-        viewBox="0 0 24 24"
-        fill="none"
-        stroke="currentColor"
-        stroke-width="2"
-      >
-        <circle cx="5" cy="5" r="1" fill="currentColor" />
-        <circle cx="12" cy="5" r="1" fill="currentColor" />
-        <circle cx="19" cy="5" r="1" fill="currentColor" />
-        <circle cx="5" cy="12" r="1" fill="currentColor" />
-        <circle cx="12" cy="12" r="1" fill="currentColor" />
-        <circle cx="19" cy="12" r="1" fill="currentColor" />
-        <circle cx="5" cy="19" r="1" fill="currentColor" />
-        <circle cx="12" cy="19" r="1" fill="currentColor" />
-        <circle cx="19" cy="19" r="1" fill="currentColor" />
-      </svg>
+      <Grip class="h-6 w-6" />
     </button>
 
     <div class="left absolute relative top-full inline-block">

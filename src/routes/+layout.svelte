@@ -15,15 +15,17 @@
 
 <Header />
 
-<Sidebar />
+<section class="flex flex-1">
+  <Sidebar />
 
-<main class="flex-1">
-  <h1 class="flex">
-    <img width="50" src={lisam_logo} alt="Lisam logo" />
-    Lisam
-  </h1>
-  {@render children()}
-</main>
+  <main>
+    <h1 class="flex items-center gap-2 text-3xl font-bold">
+      <img src={lisam_logo} alt="Lisam logo" class="h-12 w-12" />
+      Lisam
+    </h1>
+    {@render children()}
+  </main>
+</section>
 
 <footer class="bg-[#03787c] p-4 text-white">
   <img width="200" src={liu_primar_vit} alt="liu logo" />
