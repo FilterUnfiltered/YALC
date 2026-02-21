@@ -2,6 +2,41 @@
 
 @import 'tw-animate-css';
 
+@font-face {
+  font-family: 'Segoe UI';
+  font-style: normal;
+  font-weight: normal;
+  src: url('fonts/Segoe UI.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Segoe UI';
+  font-style: italic;
+  font-weight: normal;
+  src: url('fonts/Segoe UI Italic.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Segoe UI';
+  font-style: normal;
+  font-weight: 600;
+  src: url('fonts/Segoe UI Semibold.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Segoe UI';
+  font-style: normal;
+  font-weight: 300;
+  src: url('fonts/Segoe UI Light.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Segoe UI';
+  font-style: normal;
+  font-weight: bold;
+  src: url('fonts/Segoe UI Bold.ttf') format('truetype');
+}
+
 @custom-variant dark (&:is(.dark *));
 
 :root {
@@ -37,6 +72,9 @@
   --sidebar-accent-foreground: oklch(0.208 0.042 265.755);
   --sidebar-border: oklch(0.929 0.013 255.508);
   --sidebar-ring: oklch(0.704 0.04 256.788);
+
+  font-family: 'Segoe UI';
+  font-size: 10pt;
 }
 
 .dark {
