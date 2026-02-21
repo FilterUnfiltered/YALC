@@ -1,7 +1,7 @@
 <script lang="ts">
   import liu_logo from '$lib/assets/LiU-Black_Liu_noText.svg';
   import { Globe, Newspaper, File, TableProperties, Puzzle, CirclePlus } from '@lucide/svelte';
-  import { resolve } from 'path';
+  import { resolve } from '$app/paths';
 </script>
 
 <ul class="flex min-h-full w-12 flex-col items-center bg-gray-100">
