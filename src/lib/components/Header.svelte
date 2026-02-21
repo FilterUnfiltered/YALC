@@ -21,13 +21,11 @@
 <header>
   <nav class="flex h-16 items-center justify-between gap-4 bg-[#80dcf3]">
     <DropdownMenu>
-      <DropdownMenuTrigger>
-        <button
-          class="flex h-12 w-12 items-center justify-center hover:cursor-pointer hover:bg-gray-300"
-          aria-label="menu-select"
-        >
-          <Grip class="h-6 w-6" />
-        </button>
+      <DropdownMenuTrigger
+        class="flex h-12 w-12 items-center justify-center hover:cursor-pointer hover:bg-gray-300"
+        aria-label="menu-select"
+      >
+        <Grip class="h-6 w-6" />
       </DropdownMenuTrigger>
 
       <DropdownMenuContent
