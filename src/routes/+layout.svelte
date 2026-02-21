@@ -1,5 +1,6 @@
 <script lang="ts">
   import './layout.css';
+  import yalc_sharepoint from '$lib/assets/yalc-sharepoint.svg';
   import yalc_logo from '$lib/assets/yalc-logo.svg';
   import liu_primar_vit from '$lib/assets/LiU_primar_vit.svg';
   import Sidebar from '$lib/components/Sidebar.svelte';
@@ -19,7 +20,7 @@
 </script>
 
 <svelte:head>
-  <link rel="icon" href={yalc_logo} />
+  <link rel="icon" href={yalc_sharepoint} />
 </svelte:head>
 
 <Header />
