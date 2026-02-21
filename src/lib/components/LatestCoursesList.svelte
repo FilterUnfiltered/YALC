@@ -6,6 +6,7 @@
     string,
     {
       name: string;
+      time_and_place: string;
     }
   >;
 
@@ -51,10 +52,11 @@
   {#each Object.entries(courses) as [code, course] (code)}
     <a
       data-sveltekit-preload-data
-      class="w-full truncate border-t border-[#03787c] p-4 text-lg font-semibold whitespace-nowrap"
+      class="flex w-full flex-col border-t border-[#03787c] p-4 text-lg font-semibold whitespace-nowrap"
       href={resolve(`/courses/${code}`)}
     >
-      {code} - {course.name}
+      <span class="trunate">{code} - {course.name}</span>
+      <span class="text-sm font-normal opacity-80">{course.time_and_place}</span>
     </a>
     <svg
       width="2em"
