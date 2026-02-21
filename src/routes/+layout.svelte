@@ -30,7 +30,7 @@
 
   <article class="flex flex-1 flex-col">
     <SubHeader />
-    <main class="p-8 pl-50">
+    <main class="px-8 py-4">
       {@render children()}
     </main>
   </article>
