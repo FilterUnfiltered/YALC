@@ -31,14 +31,16 @@
 <section class="flex flex-1">
   <Sidebar />
 
-  <main class="p-8">
+  <article class="flex flex-1 flex-col">
     <SubHeader />
-    <h1 class="flex items-center gap-2 text-2xl font-semibold">
-      <img src={lisam_logo} alt="Lisam logo" class="h-12 w-12" />
-      Lisam
-    </h1>
-    {@render children()}
-  </main>
+    <main class="p-8">
+      <h1 class="flex items-center gap-2 text-2xl font-semibold">
+        <img src={lisam_logo} alt="Lisam logo" class="h-12 w-12" />
+        Lisam
+      </h1>
+      {@render children()}
+    </main>
+  </article>
 </section>
 
 <footer class="bg-[#03787c] p-4 text-white">
