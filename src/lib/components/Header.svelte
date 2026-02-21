@@ -31,7 +31,7 @@
       <Grip class="h-6 w-6" />
     </button>
 
-    <div class="left absolute relative top-full inline-block">
+    <div class="left absolute relative top-full inline-block dark:bg-gray-800">
       {#if open}
         <div
           transition:fly={{
@@ -41,9 +41,9 @@
             easing: cubicOut,
             opacity: 0
           }}
-          class="fixed top-10 left-0 z-50 mt-2 w-48 rounded-md bg-white p-4 shadow-lg"
+          class="fixed top-10 left-0 z-50 mt-2 w-48 rounded-md bg-white p-4 shadow-lg dark:bg-gray-800"
         >
-          <div class="flex items-center space-x-2">
+          <div class="flex items-center space-x-2 rounded-md p-2 dark:hover:bg-gray-700">
             <Switch id="airplane-mode" bind:checked={theme.light} />
             <Label for="airplane-mode">Lisam Speed</Label>
           </div>
