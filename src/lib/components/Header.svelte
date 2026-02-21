@@ -6,26 +6,18 @@
 
   import { fly } from 'svelte/transition';
   import { cubicOut } from 'svelte/easing';
+  import { setContext, getContext } from 'svelte';
+
   import { Grip } from '@lucide/svelte';
 
-  let open = $state(false);
+  let open = $state<boolean>(false);
+  let lisamSpeed = $state<boolean>(getContext<boolean>('lisam-speed'));
+
+  setContext('lisam-speed', () => lisamSpeed);
 
   function toggle() {
     open = !open;
   }
-
-  import { setContext, getContext } from 'svelte';
-
-  let lisamSpeed = getContext('lisam-speed');
-
-  setContext('lisam-speed', {
-    get value() {
-      return lisamSpeed;
-    },
-    set value(v: boolean) {
-      lisamSpeed = v;
-    }
-  });
 </script>
 
 <header>
@@ -53,8 +45,8 @@
           <div class="flex items-center space-x-2">
             <Switch
               id="airplane-mode"
-              checked={getContext('lisam-speed').value}
-              on:checkedChange={(e) => (lisamSpeed.value = e)}
+              checked={lisamSpeed}
+              onCheckedChange={(checked) => (lisamSpeed = checked)}
             />
             <Label for="airplane-mode">Lisam Speed</Label>
           </div>
