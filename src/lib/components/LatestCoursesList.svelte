@@ -1,6 +1,6 @@
 <script lang="ts">
   import yaml from 'yaml';
-  import { resolve } from '$app/paths';
+  import DifferingSpeedLink from './DifferingSpeedLink.svelte';
   import coursesYamlString from '$lib/assets/courses.yaml?raw';
   const courses = yaml.parse(coursesYamlString) as Record<
     string,
@@ -24,13 +24,12 @@
 <div
   class="grid w-full grid-cols-[1fr_50px] items-stretch border-b border-[#03787c] bg-[#f0f9fa] dark:bg-[#03787c]"
 >
-  <a
-    data-sveltekit-preload-data
+  <DifferingSpeedLink
     class="w-full truncate border-t border-[#03787c] p-4 text-lg font-semibold whitespace-nowrap"
-    href={resolve(`/programs/${randomlySelectedProgramName}`)}
+    to={`/programs/${randomlySelectedProgramName}`}
   >
     {randomlySelectedProgramName} - {programs[randomlySelectedProgramName].name}
-  </a>
+  </DifferingSpeedLink>
   <svg
     width="2em"
     height="2em"
@@ -50,14 +49,14 @@
     </g>
   </svg>
   {#each Object.entries(courses) as [code, course] (code)}
-    <a
-      data-sveltekit-preload-data
+    <!-- FIXME: use type-safe/corrected href? -->
+    <DifferingSpeedLink
       class="flex w-full flex-col border-t border-[#03787c] p-4 text-lg font-semibold whitespace-nowrap"
-      href={resolve(`/courses/${code}`)}
+      to={`/courses/${code}`}
     >
-      <span class="trunate">{code} - {course.name}</span>
+      <span class="truncate">{code} - {course.name}</span>
       <span class="text-sm font-normal opacity-80">{course.time_and_place}</span>
-    </a>
+    </DifferingSpeedLink>
     <svg
       width="2em"
       height="2em"

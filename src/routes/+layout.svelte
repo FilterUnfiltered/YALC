@@ -2,12 +2,12 @@
   import './layout.css';
   import sharepoint_icon from '$lib/assets/sharepoint.ico';
   import yalc_sharepoint from '$lib/assets/yalc-sharepoint.svg';
-  import yalc_logo from '$lib/assets/yalc-logo.svg';
   import liu_primar_vit from '$lib/assets/LiU_primar_vit.svg';
   import Sidebar from '$lib/components/Sidebar.svelte';
   import Header from '$lib/components/Header.svelte';
   import SubHeader from '$lib/components/SubHeader.svelte';
   import { theme } from '$lib/theme.svelte';
+  import DifferingSpeedLink from '$lib/components/DifferingSpeedLink.svelte';
 
   let { children } = $props();
 
@@ -47,9 +47,11 @@
 
   <div>
     For support, call us at <br />
-    <a href="tel:+46702994441" class="underline">+46 070 299 4441</a> or at
+    <DifferingSpeedLink to="tel:+46702994441" class="underline">+46 070 299 4441</DifferingSpeedLink
+    > or at
     <br />
-    <a href="tel:+46768999579" class="underline">+46 076 899 9579</a>
+    <DifferingSpeedLink to="tel:+46768999579" class="underline">+46 076 899 9579</DifferingSpeedLink
+    >
     <br />
     or you can simply just go
     <br />

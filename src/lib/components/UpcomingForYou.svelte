@@ -1,9 +1,16 @@
+<script lang="ts">
+  import DifferingSpeedLink from './DifferingSpeedLink.svelte';
+</script>
+
 <div
   class="inline-grid w-full grid-cols-[1fr_50px] items-stretch border-b border-[#03787c] dark:bg-[#03787c]"
 >
-  <a class="truncate border-t border-[#03787c] p-4 text-lg font-semibold whitespace-nowrap" href="">
+  <DifferingSpeedLink
+    class="truncate border-t border-[#03787c] p-4 text-lg font-semibold whitespace-nowrap"
+    to=""
+  >
     Death to all students - TATB03
-  </a>
+  </DifferingSpeedLink>
   <svg
     width="2em"
     height="2em"

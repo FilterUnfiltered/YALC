@@ -1,5 +1,5 @@
 <script lang="ts">
-  import { resolve } from '$app/paths';
+  import DifferingSpeedLink from './DifferingSpeedLink.svelte';
 
   const rootRoute = ['Start', 'Lisam'];
 </script>
@@ -9,16 +9,18 @@
 >
   <nav class="flex h-full w-full items-center gap-2 text-sm text-gray-600 dark:text-gray-400">
     {#each rootRoute as route, index (route)}
-      <a href={resolve('/')} class="text-lg text-black hover:underline dark:text-white">{route}</a>
+      <DifferingSpeedLink to="/" class="text-lg text-black hover:underline dark:text-white"
+        >{route}</DifferingSpeedLink
+      >
       {#if index < rootRoute.length - 1}
         <span class="text-lg">/</span>
       {/if}
     {/each}
-    <a
-      href={resolve('/courses')}
+    <DifferingSpeedLink
+      to="/courses"
       class="ml-auto flex h-full items-center border-l border-gray-300 px-4 text-lg hover:cursor-pointer hover:underline dark:border-gray-700"
     >
       Courses and Programs
-    </a>
+    </DifferingSpeedLink>
   </nav>
 </div>

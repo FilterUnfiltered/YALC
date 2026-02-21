@@ -3,7 +3,7 @@
   import LatestCoursesList from '$lib/components/LatestCoursesList.svelte';
   import UpcomingForYou from '$lib/components/UpcomingForYou.svelte';
   import lisam_logo from '$lib/assets/lisam-logo.png';
-  import { resolve } from '$app/paths';
+  import DifferingSpeedLink from '$lib/components/DifferingSpeedLink.svelte';
   import BigHeading from '$lib/components/BigHeading.svelte';
 </script>
 
@@ -12,10 +12,11 @@
     <img src={lisam_logo} alt="Lisam logo" class="h-12 w-12" />
     Lisam
   </BigHeading>
-  <a href={resolve('/')} class="hover:underline">Home</a>
-  <a href={resolve('/courses')} class="hover:underline">Courses and Programs</a>
-  <a href={resolve('/news')} class="hover:underline">Lisam News</a>
-  <a href={resolve('/upcoming')} class="hover:underline">Upcoming</a>
+  <DifferingSpeedLink to="/" class="hover:underline">Home</DifferingSpeedLink>
+  <DifferingSpeedLink to="/courses" class="hover:underline">Courses and Programs</DifferingSpeedLink
+  >
+  <DifferingSpeedLink to="/news" class="hover:underline">Lisam News</DifferingSpeedLink>
+  <DifferingSpeedLink to="/upcoming" class="hover:underline">Upcoming</DifferingSpeedLink>
 </nav>
 
 <div class="flex flex-row gap-8 px-30">

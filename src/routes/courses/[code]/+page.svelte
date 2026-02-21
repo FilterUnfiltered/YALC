@@ -1,5 +1,6 @@
 <script lang="ts">
   import BigHeading from '$lib/components/BigHeading.svelte';
+  import DifferingSpeedLink from '$lib/components/DifferingSpeedLink.svelte';
 
   let { data } = $props();
   const course = data.course;
@@ -23,16 +24,16 @@
   <div
     class="flex flex-1 flex-col opacity-80 [&>*]:p-2 [&>*]:hover:cursor-pointer [&>*]:hover:bg-gray-100 [&>*]:hover:underline [&>*]:dark:hover:bg-gray-800"
   >
-    <a>Startsida</a>
-    <a>Kursplan</a>
-    <a>Kursdokument</a>
-    <a>Samarbetsyta</a>
-    <a>Schema</a>
-    <a>Föreläsningar</a>
-    <a>Inlämningar</a>
-    <a>Anmälan</a>
-    <a>Laborationer</a>
-    <a>Teams</a>
+    <DifferingSpeedLink to="/courses/{course.code}/start">Startsida</DifferingSpeedLink>
+    <DifferingSpeedLink to="/courses/{course.code}/plan">Kursplan</DifferingSpeedLink>
+    <DifferingSpeedLink to="/courses/{course.code}/documents">Kursdokument</DifferingSpeedLink>
+    <DifferingSpeedLink to="/courses/{course.code}/collaboration">Samarbetsyta</DifferingSpeedLink>
+    <DifferingSpeedLink to="/courses/{course.code}/schedule">Schema</DifferingSpeedLink>
+    <DifferingSpeedLink to="/courses/{course.code}/lectures">Föreläsningar</DifferingSpeedLink>
+    <DifferingSpeedLink to="/courses/{course.code}/assignments">Inlämningar</DifferingSpeedLink>
+    <DifferingSpeedLink to="/courses/{course.code}/registration">Anmälan</DifferingSpeedLink>
+    <DifferingSpeedLink to="/courses/{course.code}/laborations">Laborationer</DifferingSpeedLink>
+    <DifferingSpeedLink to="/courses/{course.code}/teams">Teams</DifferingSpeedLink>
   </div>
 
   <div class="flex-4 p-2">

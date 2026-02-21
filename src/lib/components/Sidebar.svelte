@@ -2,7 +2,7 @@
   import liu_logo from '$lib/assets/LiU-Black_Liu_noText.svg';
   import light_liu_logo from '$lib/assets/LiU-White_Liu_noText.svg';
   import { Globe, Newspaper, File, TableProperties, Puzzle, CirclePlus } from '@lucide/svelte';
-  import { resolve } from '$app/paths';
+  import DifferingSpeedLink from './DifferingSpeedLink.svelte';
   import { theme } from '$lib/theme.svelte';
 </script>
 
@@ -10,50 +10,50 @@
   <li
     class="flex h-12 w-14 items-center justify-center hover:cursor-pointer hover:bg-gray-200 dark:hover:bg-gray-700"
   >
-    <a href={resolve('/')}>
+    <DifferingSpeedLink to="/">
       <img src={theme.light ? liu_logo : light_liu_logo} alt="LiU logo" class="h-6 w-6" />
-    </a>
+    </DifferingSpeedLink>
   </li>
   <li
     class="flex h-12 w-14 items-center justify-center hover:cursor-pointer hover:bg-gray-200 dark:hover:bg-gray-700"
   >
-    <a href={resolve('/courses')}>
+    <DifferingSpeedLink to="/courses">
       <Globe class="h-6 w-6 text-gray-500 dark:text-gray-300" />
-    </a>
+    </DifferingSpeedLink>
   </li>
   <li
     class="flex h-12 w-14 items-center justify-center hover:cursor-pointer hover:bg-gray-200 dark:hover:bg-gray-700"
   >
-    <a href={resolve('/news')}>
+    <DifferingSpeedLink to="/news">
       <Newspaper class="h-6 w-6 text-gray-500 dark:text-gray-300" />
-    </a>
+    </DifferingSpeedLink>
   </li>
   <li
     class="flex h-12 w-14 items-center justify-center hover:cursor-pointer hover:bg-gray-200 dark:hover:bg-gray-700"
   >
-    <a href={resolve('/files')}>
+    <DifferingSpeedLink to="/files">
       <File class="h-6 w-6 text-gray-500 dark:text-gray-300" />
-    </a>
+    </DifferingSpeedLink>
   </li>
   <li
     class="flex h-12 w-14 items-center justify-center hover:cursor-pointer hover:bg-gray-200 dark:hover:bg-gray-700"
   >
-    <a href={resolve('/lists')}>
+    <DifferingSpeedLink to="/lists">
       <TableProperties class="h-6 w-6 text-gray-500 dark:text-gray-300" />
-    </a>
+    </DifferingSpeedLink>
   </li>
   <li
     class="flex h-12 w-14 items-center justify-center hover:cursor-pointer hover:bg-gray-200 dark:hover:bg-gray-700"
   >
-    <a href={resolve('/connections')}>
+    <DifferingSpeedLink to="/connections">
       <Puzzle class="h-6 w-6 text-gray-500 dark:text-gray-300" />
-    </a>
+    </DifferingSpeedLink>
   </li>
   <li
     class="flex h-12 w-14 items-center justify-center hover:cursor-pointer hover:bg-gray-200 dark:hover:bg-gray-700"
   >
-    <a href={resolve('/create')}>
+    <DifferingSpeedLink to="/create">
       <CirclePlus class="h-6 w-6 text-gray-500 dark:text-gray-300" />
-    </a>
+    </DifferingSpeedLink>
   </li>
 </ul>
