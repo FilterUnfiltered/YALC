@@ -4,7 +4,7 @@ export const theme = $state({
   light: true,
   shortAttentionSpan: false,
   lisamModeDelay: {
-    from: 1000,
-    to: 4000
+    from: 3000,
+    to: 5000
   }
 });
