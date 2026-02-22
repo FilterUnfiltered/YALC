@@ -2,14 +2,12 @@ TATB01:
   name: Matematisk grunkkurs
   time_and_place: VT26, Campus Valla
   description: |
-    <p>Kursen upplevs som en bra och nödvändig inkörsport till kommande matematikstudier. Man lär sig bland annat bevisföring och lösningsredovisning enligt högskolematematikens krav. Med kursen får man också en för många välbehövlig uppfriskning av gymnasiematematiken. Kursen examineras med obligatoriska inlämningsuppgifter samt två duggor (mindre prov). För den som inte uppnått godkänt efter detta finns möjlighet att skriva en tenta. Inlämningsuppgifterna rekommenderas studenten att göra utanför lektionstid då man annars lätt kan halka efter på lektionsuppgifterna. Kurslitteraturen är samma som senare kommer att används i Envariabelsanalys 1 och Envariabelsanalys 2, och du kommer dessutom att ha stor nytta av den som uppslagsbok i andra kurser.</p>
-
+    <p class="font-bold text-4xl">På grund av brott mot mänskliga rättigheter kommer kursen inte längre ges kommande terminer. Efter klagomål från studenter kontaktades FN i samband med brott mot Genèvekonventioner. Kursen har fortfarande öppna fall i domstolar involverade interpol, ICJ (International Court of Justice), ICC (International Criminal Court) där LiU är åklagad för brott mot punkter 1, 2, 3, 4, 5, 6, och 7 i Genèvekonventionerna.</p>
+    <br />
     <p>
       OBSERVERA <b>ATT</b> första tentamen har släppts och rekommenderas läsas igenom av SAMTLIGA studenter.
     <a class="text-yellow-300 hover:underline" href="/exams/TATB01.pdf">LÄNK TILL TENTAMEN</a>
     </p>
-
-    
 
 TATB02:
   name: Matematisk fortsättningskurs
@@ -36,4 +34,3 @@ FNAF87:
     <p>Kursen är en introduktion till överlevnadstekniker i den skrämmande världen av Five Nights at Freddy's. Under kursens gång kommer du att lära dig hur man låser en dörr, hur man ringer polisen, och många andra viktiga överlevnadstekniker. Kursen examineras genom att du måste överleva Ultimate Custom Night 50/20. Får du underkänt kan du komplettera genom att ta på dig en 1:1 replica av springtrapan och springa runt i en mörk skog i 5 minuter. Lycka till.</p>
 
     <p>Tentamen återfinns återigen på <a class="text-yellow-300 hover:underline" href="/exams/FNAF87.pdf">LÄNK TILL TENTAMEN</a></p>
-
