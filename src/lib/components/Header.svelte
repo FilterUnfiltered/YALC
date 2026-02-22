@@ -2,7 +2,7 @@
   import { Label } from '$lib/components/ui/label/index.js';
   import { Switch } from '$lib/components/ui/switch/index.js';
   import { Input } from '$lib/components/ui/input/index.js';
-  import { theme } from '$lib/theme.svelte';
+  import { theme, LISAM_MODE_STORAGE_KEY } from '$lib/theme.svelte';
 
   import liu_notext_white from '$lib/assets/LiU-White_Liu_noText.svg';
   import liu_notext_black from '$lib/assets/LiU-Black_Liu_noText.svg';
@@ -45,19 +45,18 @@
 
   let foxyGifSrc = $derived(doJumpscare ? `${foxyGifPath}?${Date.now()}` : null);
 
-  const LISAM_MODE_STORAGE_KEY = 'lisamMode';
-
   import { browser } from '$app/environment';
 
   if (browser) {
-    const stored = localStorage.getItem(LISAM_MODE_STORAGE_KEY);
-
-    if (stored !== null) {
-      theme.light = stored === 'true';
-    }
-
     $effect(() => {
       localStorage.setItem(LISAM_MODE_STORAGE_KEY, String(theme.light));
+
+      // Apply/remove dark class on html element
+      if (theme.light) {
+        document.documentElement.classList.remove('dark');
+      } else {
+        document.documentElement.classList.add('dark');
+      }
     });
   }
 
@@ -128,8 +127,10 @@
   </nav>
 </header>
 
-<img
-  src={foxyGifSrc}
-  alt="Foxy Jumpscare"
-  class="pointer-events-none absolute top-0 left-0 h-full w-full object-cover"
-/>
+{#if foxyGifSrc}
+  <img
+    src={foxyGifSrc}
+    alt="Foxy Jumpscare"
+    class="pointer-events-none absolute top-0 left-0 h-full w-full object-cover"
+  />
+{/if}

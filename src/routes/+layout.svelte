@@ -6,18 +6,19 @@
   import Sidebar from '$lib/components/Sidebar.svelte';
   import Header from '$lib/components/Header.svelte';
   import SubHeader from '$lib/components/SubHeader.svelte';
-  import { theme } from '$lib/theme.svelte';
+  import { theme, LISAM_MODE_STORAGE_KEY } from '$lib/theme.svelte';
   import DifferingSpeedLink from '$lib/components/DifferingSpeedLink.svelte';
+  import { browser } from '$app/environment';
 
   let { children } = $props();
 
-  $effect(() => {
-    if (!theme.light) {
-      document.body.classList.add('dark');
-    } else {
-      document.body.classList.remove('dark');
+  // Sync theme state with localStorage
+  if (browser) {
+    const stored = localStorage.getItem(LISAM_MODE_STORAGE_KEY);
+    if (stored !== null) {
+      theme.light = stored === 'true';
     }
-  });
+  }
 
   let favicon = $derived(theme.light ? sharepoint_icon : yalc_sharepoint);
 </script>
