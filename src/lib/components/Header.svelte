@@ -7,8 +7,6 @@
   import liu_notext_white from '$lib/assets/LiU-White_Liu_noText.svg';
   import liu_notext_black from '$lib/assets/LiU-Black_Liu_noText.svg';
 
-  let liu_themed_logo = $derived(theme.light ? liu_notext_black : liu_notext_white);
-
   import search from '$lib/assets/search.svg';
   import settings from '$lib/assets/settings.svg';
   import copilot from '$lib/assets/copilot.svg';
@@ -21,6 +19,8 @@
 
   import foxyGifPath from '$lib/assets/fnaf-foxy-jumpscare.gif';
   import screamPath from '$lib/assets/foxy.opus';
+
+  let liu_themed_logo = $derived(theme.light ? liu_notext_black : liu_notext_white);
 
   let doJumpscare = $state(false);
 
@@ -77,12 +77,19 @@
 
         <DropdownMenuContent
           align="start"
-          class="mt-2 w-48 rounded-md bg-white p-4 shadow-lg dark:bg-gray-800"
+          class="mt-2 w-72 rounded-md bg-white p-4 shadow-lg dark:bg-gray-800"
         >
-          <div class="flex items-center space-x-2 rounded-md p-2 dark:hover:bg-gray-700">
-            <Switch id="lisam-mode" bind:checked={theme.light} />
-            <Label for="lisam-mode">Lisam Speed</Label>
-          </div>
+          <ul class="flex flex-col gap-3 rounded-md p-2 dark:hover:bg-gray-700">
+            <li class="flex flex-row gap-2">
+              <Switch id="lisam-mode" bind:checked={theme.light} />
+              <Label for="lisam-mode">Lisam Speed</Label>
+            </li>
+
+            <li class="flex flex-row gap-2">
+              <Switch id="short-attention-span" bind:checked={theme.shortAttentionSpan} />
+              <Label for="short-attention-span">Short Attention Span Mode</Label>
+            </li>
+          </ul>
         </DropdownMenuContent>
       </DropdownMenu>
       <img class="h-12 w-12" src={liu_themed_logo} alt="YALC logo" />

@@ -2,7 +2,7 @@
   import DifferingSpeedLink from './DifferingSpeedLink.svelte';
 </script>
 
-<ul class="w-full items-stretch border-b border-[#03787c] dark:bg-[#03787c]">
+<ul class="w-fit items-stretch border-b border-[#03787c] dark:bg-[#03787c]">
   <li class="flex w-full flex-row">
     <DifferingSpeedLink
       class="truncate border-t border-[#03787c] p-4 text-lg font-semibold whitespace-nowrap"

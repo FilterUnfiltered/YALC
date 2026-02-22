@@ -38,6 +38,13 @@
       {@render children()}
     </main>
   </article>
+
+  <div class="hidden w-1/4 flex-col gap-4 px-8 py-4 lg:flex">
+    <video autoplay muted loop>
+      <source src="/path/to/video.mp4" type="video/mp4" />
+      Your browser does not support the video tag.
+    </video>
+  </div>
 </section>
 
 <footer class="flex justify-between gap-4 bg-[#03787c] p-4 text-white">
