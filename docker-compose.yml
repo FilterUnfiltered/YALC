@@ -1,0 +1,14 @@
+version: '3.8'
+
+services:
+  yalc:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - '8787:8787'
+    environment:
+      - NODE_ENV=production
+      - PORT=8787
+    restart: unless-stopped
+    container_name: yalc-app
