@@ -61,7 +61,7 @@
 </script>
 
 <header>
-  <nav class="grid grid-cols-3 items-center gap-4 bg-[#80dcf3]">
+  <nav class="grid grid-cols-3 items-center gap-4 bg-[#80dcf3] dark:bg-[#03787c]">
     <!-- Left section -->
     <div class="flex items-center gap-4">
       <DropdownMenu>
