@@ -4,7 +4,11 @@
   import { Input } from '$lib/components/ui/input/index.js';
   import { theme } from '$lib/theme.svelte';
 
+  import liu_notext_white from '$lib/assets/LiU-White_Liu_noText.svg';
   import liu_notext_black from '$lib/assets/LiU-Black_Liu_noText.svg';
+
+  let liu_themed_logo = $derived(theme.light ? liu_notext_black : liu_notext_white);
+
   import search from '$lib/assets/search.svg';
   import settings from '$lib/assets/settings.svg';
   import copilot from '$lib/assets/copilot.svg';
@@ -82,7 +86,7 @@
           </div>
         </DropdownMenuContent>
       </DropdownMenu>
-      <img class="h-12 w-12" src={liu_notext_black} alt="YALC logo" />
+      <img class="h-12 w-12" src={liu_themed_logo} alt="YALC logo" />
       <div class="flex items-center">
         <b class="mx-12">Share</b><b>Point</b>
       </div>
