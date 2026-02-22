@@ -1,4 +1,4 @@
-#let tenta(course-code, body) = {
+#let tenta(course-code, institution, body) = {
   set text(font: "New Computer Modern", lang: "sv")
   show heading: set block(below: 2em)
   set math.equation(numbering: "(1)")
@@ -6,8 +6,7 @@
     dir: ltr,
     [
       LINKÖPINGS UNIVERSITET\
-      Matemtaiksta instituonen\
-      Igenstämplad matematris
+      #institution \
     ],
     align(right)[
       #course-code\

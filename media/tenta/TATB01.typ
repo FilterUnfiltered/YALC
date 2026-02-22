@@ -1,5 +1,5 @@
 #import "lib.typ": tenta
-#show: tenta.with("TATB01")
+#show: tenta.with("TATB01", "Matematiska instituitnnnnn")
 
 = Tentamen i Matematisk runkkurs 2026-01-05 kl 8:00-8:99
 
