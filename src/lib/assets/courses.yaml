@@ -2,7 +2,14 @@ TATB01:
   name: Matematisk grunkkurs
   time_and_place: VT26, Campus Valla
   description: |
-    Kursen upplevs som en bra och nödvändig inkörsport till kommande matematikstudier. Man lär sig bland annat bevisföring och lösningsredovisning enligt högskolematematikens krav. Med kursen får man också en för många välbehövlig uppfriskning av gymnasiematematiken. Kursen examineras med obligatoriska inlämningsuppgifter samt två duggor (mindre prov). För den som inte uppnått godkänt efter detta finns möjlighet att skriva en tenta. Inlämningsuppgifterna rekommenderas studenten att göra utanför lektionstid då man annars lätt kan halka efter på lektionsuppgifterna. Kurslitteraturen är samma som senare kommer att används i Envariabelsanalys 1 och Envariabelsanalys 2, och du kommer dessutom att ha stor nytta av den som uppslagsbok i andra kurser.
+    <p>Kursen upplevs som en bra och nödvändig inkörsport till kommande matematikstudier. Man lär sig bland annat bevisföring och lösningsredovisning enligt högskolematematikens krav. Med kursen får man också en för många välbehövlig uppfriskning av gymnasiematematiken. Kursen examineras med obligatoriska inlämningsuppgifter samt två duggor (mindre prov). För den som inte uppnått godkänt efter detta finns möjlighet att skriva en tenta. Inlämningsuppgifterna rekommenderas studenten att göra utanför lektionstid då man annars lätt kan halka efter på lektionsuppgifterna. Kurslitteraturen är samma som senare kommer att används i Envariabelsanalys 1 och Envariabelsanalys 2, och du kommer dessutom att ha stor nytta av den som uppslagsbok i andra kurser.</p>
+
+    <p>
+      OBSERVERA <b>ATT</b> första tentamen har släppts och rekommenderas läsas igenom av SAMTLIGA studenter.
+    <a class="text-yellow-300 hover:underline" href="/exams/TATB01.pdf">LÄNK TILL TENTAMEN</a>
+    </p>
+
+    
 
 TATB02:
   name: Matematisk fortsättningskurs

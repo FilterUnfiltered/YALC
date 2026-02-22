@@ -39,6 +39,6 @@
   </div>
 
   <div class="flex-4 p-2">
-    {course.description}
+    {@html course.description}
   </div>
 </div>
