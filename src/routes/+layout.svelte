@@ -39,9 +39,13 @@
     </main>
   </article>
 
-  <div class="hidden w-1/4 flex-col gap-4 px-8 py-4 lg:flex">
-    <video autoplay muted loop>
-      <source src="/path/to/video.mp4" type="video/mp4" />
+  <div
+    class="absolute top-0 right-0 hidden h-full w-1/5 flex-col gap-4 transition-transform duration-500 ease-in-out lg:flex {theme.shortAttentionSpan
+      ? 'translate-x-0'
+      : 'translate-x-full'}"
+  >
+    <video autoplay muted loop class="h-full w-full object-cover">
+      <source src="https://www.lysator.liu.se/~b1nry/subwaysurfers.mp4" type="video/mp4" />
       Your browser does not support the video tag.
     </video>
   </div>
