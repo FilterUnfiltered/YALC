@@ -28,8 +28,11 @@
           href="https://www.youtube.com/watch?v=dQw4w9WgXcQ"
           class="text-sky-600 hover:underline">here</a
         >
-        here to go to the page! <br /> - Jonas Kvarnström
+        here to go to the page!
       </p>
+
+      <!-- move this to the right? not sure what tailwind class would do that -->
+      <p class="mt-2 text-slate-600 dark:text-slate-400">- Jonas Kvarnström</p>
 
       {#if error}
         <pre
