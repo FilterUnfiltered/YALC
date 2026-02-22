@@ -9,6 +9,7 @@
   import { theme, LISAM_MODE_STORAGE_KEY } from '$lib/theme.svelte';
   import DifferingSpeedLink from '$lib/components/DifferingSpeedLink.svelte';
   import { browser } from '$app/environment';
+  import { fly } from 'svelte/transition';
 
   let { children } = $props();
 
@@ -39,16 +40,17 @@
     </main>
   </article>
 
-  <div
-    class="absolute top-0 right-0 hidden h-full w-1/5 flex-col gap-4 transition-transform duration-500 ease-in-out lg:flex {theme.shortAttentionSpan
-      ? 'translate-x-0'
-      : 'translate-x-full'}"
-  >
-    <video autoplay muted loop class="h-full w-full object-cover">
-      <source src="https://www.lysator.liu.se/~b1nry/subwaysurfers.mp4" type="video/mp4" />
-      Your browser does not support the video tag.
-    </video>
-  </div>
+  {#if theme.shortAttentionSpan}
+    <div
+      class="absolute top-0 right-0 hidden h-full w-1/5 flex-col gap-4 lg:flex"
+      transition:fly={{ x: 300, duration: 500 }}
+    >
+      <video autoplay muted loop class="h-full w-full object-cover">
+        <source src="https://www.lysator.liu.se/~b1nry/subwaysurfers.mp4" type="video/mp4" />
+        Your browser does not support the video tag.
+      </video>
+    </div>
+  {/if}
 </section>
 
 <footer class="flex justify-between gap-4 bg-[#03787c] p-4 text-white">
